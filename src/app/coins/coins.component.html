@@ -1,11 +1,13 @@
 
   
-  {{coin.name}}
-  
+
 
 <table>
 <tr *ngFor="let coin of coins">
 <td>{{coin.id}}</td>
+<td>{{coin.quantity}}</td>
+<td>{{coin.price}}</td>
+<td>{{coin.targetMarketCap}}</td>
 </tr>
 </table>
 
