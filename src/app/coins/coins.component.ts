@@ -3,9 +3,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Coin } from './coin';
 import { COINS } from './mock-coins';
+import { CoinService } from './coin.service';
 
 @Component({
   selector: 'app-coins',
+  providers: [ CoinService ],
   templateUrl: './coins.component.html',
   styleUrls: ['./coins.component.css']
 })
@@ -19,25 +21,10 @@ export class CoinsComponent implements OnInit {
 
 
   
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, CoinService: CoinService) { }
 
   ngOnInit() {
-	var codes = "";
-	for (let i = 0; i < this.coins.length; i++) {
-		
-		var coin = this.coins[i];
-		codes = codes + coin.id + ",";
-	}
-	//var data;
-	  var url = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms="+codes+"&tsyms=USD";
-	this.http.get(url).subscribe(data => {
-		console.log(data);
-		for (let i = 0; i < this.coins.length; i++) {
-			var coin = this.coins[i];
-			console.log(coin.id);
-			coin.price = data.RAW[coin.id].USD.PRICE;
-		}
-	});
+	
 	
   }
 

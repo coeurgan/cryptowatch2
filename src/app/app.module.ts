@@ -18,7 +18,9 @@ import { CoinsComponent } from './coins/coins.component';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
