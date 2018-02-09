@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+
 import { Coin } from './coin';
 import { COINS } from './mock-coins';
 import { CoinService } from './coin.service';
@@ -15,17 +15,11 @@ import { CoinService } from './coin.service';
 @Injectable()
 export class CoinsComponent implements OnInit {
 
-  coins=COINS;
-	
-
-
-
+  coins:Coin[];
   
-  constructor(private http: HttpClient, CoinService: CoinService) { }
+  constructor(private coinService: CoinService) { }
 
   ngOnInit() {
-	
-	
+	this.coins = this.coinService.getCoins();
   }
-
 }
