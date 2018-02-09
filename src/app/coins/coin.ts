@@ -6,5 +6,6 @@ export class Coin {
   marketCap?:number;
   targetMarketCap:number;
   targetPrice?:number;
-	
+  totalValue?:number;
+  targetTotalValue?:number;
 }

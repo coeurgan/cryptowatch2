@@ -5,6 +5,8 @@ import { Coin } from './coin';
 import { COINS } from './mock-coins';
 import { CoinService } from './coin.service';
 
+
+
 @Component({
   selector: 'app-coins',
   providers: [ CoinService ],

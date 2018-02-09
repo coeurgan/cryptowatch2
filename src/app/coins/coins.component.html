@@ -5,9 +5,13 @@
 <table>
 <tr *ngFor="let coin of coins">
 <td>{{coin.id}}</td>
+<td>{{coin.name}}</td>
 <td>{{coin.quantity}}</td>
 <td>{{coin.price}}</td>
+<td>{{coin.totalValue}}</td>
+<td>{{coin.marketCap | millionDollars | currency:'M$'}}</td>
 <td>{{coin.targetMarketCap}}</td>
+<td>{{coin.targetPrice}}</td>
+<td>{{coin.targetTotalValue}}</td>
 </tr>
 </table>
-
