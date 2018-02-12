@@ -21,10 +21,10 @@ import { CoinsComponent } from './coins/coins.component';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-	/*
+	
 	HttpClientInMemoryWebApiModule.forRoot(
 		InMemoryDataService, { dataEncapsulation: false }
-	),*/
+	),
   ],
   providers: [
 
