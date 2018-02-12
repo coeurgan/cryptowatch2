@@ -2,13 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Coin } from './coin';
 import { COINS } from './mock-coins';
+import { Observable } from 'rxjs/Observable';
+import { of } from 'rxjs/observable/of';
 
 @Injectable()
 export class CoinService {
 
   constructor(private http: HttpClient) { }
   
-  getCoins(): Coin[] {
+  getCoins(): Observable<Coin[]> {
 	var coins= COINS;
 	var codes = "";
 	for (let i = 0; i < coins.length; i++) {
@@ -16,6 +18,7 @@ export class CoinService {
 		var coin = coins[i];
 		codes = codes + coin.id + ",";
 	}
+	/*
 	//var data;
 	var url = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms="+codes+"&tsyms=USD";
 	this.http.get(url).subscribe(data => {
@@ -27,7 +30,8 @@ export class CoinService {
 			coin.name = "";
 		}
 	});
-    return coins;
+	*/
+    return of(coins);
   }
 
 }

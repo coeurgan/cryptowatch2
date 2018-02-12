@@ -22,11 +22,16 @@ export class CoinsComponent implements OnInit {
   coins:Coin[];
   filterValue:string;
   
+	
+	getCoins(): void {
+		this.coinService.getCoins()
+			.subscribe(coins => this.coins = coins);
+}
   constructor(private coinService: CoinService) { }
   
 
   ngOnInit() {
-	this.coins = this.coinService.getCoins();
+	this.getCoins();
   }
   
     filter() {
