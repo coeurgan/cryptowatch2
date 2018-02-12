@@ -22,10 +22,9 @@ export class CoinService {
 		console.log(data);
 		for (let i = 0; i < coins.length; i++) {
 			var coin = coins[i];
-			console.log(coin.id);
-			console.log(data["RAW"][coin.id]);
 			coin.price = data["RAW"][coin.id]["USD"]["PRICE"];
 			coin.marketCap = data["RAW"][coin.id]["USD"]["MKTCAP"];
+			coin.name = "";
 		}
 	});
     return coins;

@@ -11,17 +11,27 @@ import { CoinService } from './coin.service';
   selector: 'app-coins',
   providers: [ CoinService ],
   templateUrl: './coins.component.html',
-  styleUrls: ['./coins.component.css']
+   styleUrls: [
+        './coins.component.css'
+    ], 
 })
 
 @Injectable()
 export class CoinsComponent implements OnInit {
 
   coins:Coin[];
+  filterValue:string;
   
   constructor(private coinService: CoinService) { }
+  
 
   ngOnInit() {
 	this.coins = this.coinService.getCoins();
   }
+  
+    filter() {
+	    console.log(this.filterValue);
+	return this.filterValue + " " + this.filterValue;
+   }
+
 }
