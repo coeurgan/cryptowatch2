@@ -23,7 +23,7 @@ import { CoinsComponent } from './coins/coins.component';
     HttpClientModule,
 	
 	HttpClientInMemoryWebApiModule.forRoot(
-		InMemoryDataService, { dataEncapsulation: false }
+		InMemoryDataService, { dataEncapsulation: false, passThruUnknownUrl: true }
 	),
   ],
   providers: [
