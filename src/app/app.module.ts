@@ -9,13 +9,15 @@ import { InMemoryDataService }  from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
 import { CoinsComponent } from './coins/coins.component';
+import { CoinDetailComponent } from './coin-detail/coin-detail.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CoinsComponent,
-    MillionDollarsPipe
+    MillionDollarsPipe,
+    CoinDetailComponent
   ],
   imports: [
     BrowserModule,

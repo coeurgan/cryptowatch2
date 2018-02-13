@@ -24,16 +24,5 @@
 <td>{{coin.price * coin.quantity * coin.targetMarketCap *1000000 / coin.marketCap |currency}}</td>
 </tr>
 </table>
-<div *ngIf="selectedCoin">
-<h2>{{ selectedCoin.id | uppercase }} Details</h2>
-<div>
-  <label>Quantity:
-    <input [(ngModel)]="selectedCoin.quantity" placeholder="12">
-  </label>
-</div>
-<div>
-  <label>Target market CAP (M$):
-    <input [(ngModel)]="selectedCoin.targetMarketCap" placeholder="10000">
-  </label>
-</div>
-</div>
+  <app-coin-detail [coin]="selectedCoin"></app-coin-detail>
+
