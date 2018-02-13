@@ -21,6 +21,11 @@ export class CoinsComponent implements OnInit {
 
   coins:Coin[];
   filterValue:string;
+  selectedCoin: Coin;
+
+	onSelect(coin: Coin): void {
+	  this.selectedCoin = coin;
+	}
   
 	
 	getCoins(): void {

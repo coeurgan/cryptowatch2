@@ -13,7 +13,7 @@
 <td>Target unit price</td>
 <td>Target total value</td>
 </tr>
-<tr *ngFor="let coin of coins">
+<tr *ngFor="let coin of coins" (click)="onSelect(coin)">
 <td>{{coin.id}}</td>
 <td>{{coin.quantity}}</td>
 <td>{{coin.price | currency}}</td>
@@ -24,3 +24,16 @@
 <td>{{coin.price * coin.quantity * coin.targetMarketCap *1000000 / coin.marketCap |currency}}</td>
 </tr>
 </table>
+<div *ngIf="selectedCoin">
+<h2>{{ selectedCoin.id | uppercase }} Details</h2>
+<div>
+  <label>Quantity:
+    <input [(ngModel)]="selectedCoin.quantity" placeholder="12">
+  </label>
+</div>
+<div>
+  <label>Target market CAP (M$):
+    <input [(ngModel)]="selectedCoin.targetMarketCap" placeholder="10000">
+  </label>
+</div>
+</div>
