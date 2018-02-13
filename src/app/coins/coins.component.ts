@@ -24,8 +24,19 @@ export class CoinsComponent implements OnInit {
   
 	
 	getCoins(): void {
-		this.coinService.getCoins()
-			.subscribe(coins => this.coins = coins);
+		this.coinService.getCoins().subscribe(coins => 
+			{
+				console.log("coinService");
+				console.log(coins);
+				this.coins = coins;
+								this.coinService.getCryptoCompareCoins(this.coins).subscribe(data => 
+			   {
+				   this.coinService.mergeData(this.coins, data);
+				   console.log("reçu complete coins");
+			   });
+			});
+
+		
 }
   constructor(private coinService: CoinService) { }
   
@@ -35,7 +46,6 @@ export class CoinsComponent implements OnInit {
   }
   
     filter() {
-	    console.log(this.filterValue);
 	return this.filterValue + " " + this.filterValue;
    }
 
