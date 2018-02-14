@@ -10,6 +10,7 @@ import { InMemoryDataService }  from './in-memory-data.service';
 import { AppComponent } from './app.component';
 import { CoinsComponent } from './coins/coins.component';
 import { CoinDetailComponent } from './coin-detail/coin-detail.component';
+import { CoinAddComponent } from './coin-add/coin-add.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { CoinDetailComponent } from './coin-detail/coin-detail.component';
     AppComponent,
     CoinsComponent,
     MillionDollarsPipe,
-    CoinDetailComponent
+    CoinDetailComponent,
+    CoinAddComponent
   ],
   imports: [
     BrowserModule,
