@@ -1,0 +1,13 @@
+<div *ngIf="coin">
+<h2>{{ coin.id | uppercase }} Details</h2>
+<div>
+  <label>Quantity:
+    <input [(ngModel)]="coin.quantity" placeholder="12">
+  </label>
+</div>
+<div>
+  <label>Target market CAP (M$):
+    <input [(ngModel)]="coin.targetMarketCap" placeholder="10000">
+  </label>
+</div>
+</div>
