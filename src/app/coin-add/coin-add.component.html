@@ -1,16 +1,29 @@
-  <div>
-  <label>Coin id:
-    <input placeholder="ETH" #coinId />
-  </label>
-    <label>Coin quantity:
-    <input  placeholder="12" #coinQuantity />
-  </label>
-    <label>Target maket cap:
-    <input  placeholder="5000" #coinTargetMarketCap />
-  </label>
-  <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(coinId.value, coinQuantity.value, coinTargetMarketCap.value);">
-    add
+<div *ngIf="visible">
+<div class="w3-container w3-teal">
+  <h2>Add new coin</h2>
+</div>
+
+<form class="w3-container">
+  <p>
+  <input class="w3-input" type="text" #coinId>
+  <label>Coin id</label></p>
+
+  <p>
+  <input class="w3-input" type="text" #coinQuantity>
+  <label>Coin quantity</label></p>
+
+  <p>
+  <input class="w3-input" type="text" #coinTargetMarketCap>
+  <label>Target maket cap</label></p>
+</form>
+  <button class="w3-button w3-teal" (click)="add(coinId.value, coinQuantity.value, coinTargetMarketCap.value);">
+    ADD
   </button>
+    <button class="w3-button w3-teal" (click)="setVisible(false);">
+    CANCEL
+  </button>
+</div>
+<div *ngIf="!visible">
+<p><button class="w3-button w3-block w3-teal" (click)="setVisible(true);">ADD COIN</button></p>
 </div>
 

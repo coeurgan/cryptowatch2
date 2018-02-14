@@ -10,14 +10,21 @@ import { Coin } from '../coins/coin';
 })
 export class CoinAddComponent implements OnInit {
 
-  @Input() coins: Coin[];
-  constructor(private coinService: CoinService) { }
+	@Input() coins: Coin[];
+	visible: Boolean;
+	constructor(private coinService: CoinService) { }
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+		this.visible = false;
+	}
   
 	add(coinId : string, coinQuantity : number, coinTargetMarketCap:number)
 	{
 	  this.coinService.add(this.coins, coinId, coinQuantity, coinTargetMarketCap);
+	}
+	
+	setVisible(visible : boolean)
+	{
+		this.visible = visible;
 	}
 }

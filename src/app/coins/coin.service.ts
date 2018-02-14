@@ -11,24 +11,23 @@ import 'rxjs/add/operator/map';
 export class CoinService {
 
   constructor(private http: HttpClient) { }
-  getCoins(): Observable<Coin[]> {
-     return this.http.get<Coin[]>('api/coins');
-}
+	getCoins(): Observable<Coin[]> {
+		return this.http.get<Coin[]>('api/coins');
+	}
 	  
 	getCryptoCompareCoins(coins: Coin[]) {
-		console.log("getCryptoCompareCoins+"+coins);
-		  if (!coins)
-		  {
-			  return of(coins);
-		  }
-		  var codes = "";
+		if (!coins)
+		{
+		  return of(coins);
+		}
+		var codes = "";
 		  
-			for (let i = 0; i < coins.length; i++) {
-				var coin = coins[i];
-				codes = codes + coin.id + ",";
-			}
-			var url = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms="+codes+"&tsyms=USD";
-			return this.http.get(url);
+		for (let i = 0; i < coins.length; i++) {
+			var coin = coins[i];
+			codes = codes + coin.id + ",";
+		}
+		var url = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms="+codes+"&tsyms=USD";
+		return this.http.get(url);
 	  }
 	  
 	  mergeData(coins: Coin[], data: Object)
