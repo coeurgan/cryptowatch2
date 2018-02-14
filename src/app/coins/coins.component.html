@@ -4,14 +4,14 @@
 
 <table   class="w3-table-all w3-hoverable">
 <tr>
-<td (click)="onSort('id')">Ticker</td>
+<td ><button class="w3-btn" (click)="onSort('id')">Ticker</button></td>
 <td>Quantity</td>
 <td>Unit price</td>
-<td>Total value</td>
-<td>Market CAP</td>
-<td>Target market CAP</td>
+<td><button class="w3-btn" (click)="onSort('total_value')">Total value</button></td>
+<td><button class="w3-btn" (click)="onSort('market_cap')">Market CAP</button></td>
+<td><button class="w3-btn" (click)="onSort('target_market_cap')">Target market CAP</button></td>
 <td>Target unit price</td>
-<td>Target total value</td>
+<td><button class="w3-btn" (click)="onSort('target_total_value')">Target total value</button></td>
 </tr>
 <tr *ngFor="let coin of coins" (click)="onSelect(coin)">
 <td>{{coin.id}}</td>
