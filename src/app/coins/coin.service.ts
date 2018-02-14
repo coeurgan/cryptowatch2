@@ -44,4 +44,12 @@ export class CoinService {
 			coin.name = "";
 		}
 	  }
+	  
+	  refreshData(coins: Coin[])
+	  {
+			this.getCryptoCompareCoins(coins).subscribe(data => 
+			{
+				this.mergeData(coins, data);
+			});
+	   }
 }

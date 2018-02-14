@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 
 import { Coin } from './coin';
 import { COINS } from './mock-coins';
@@ -37,14 +38,9 @@ export class CoinsComponent implements OnInit {
 		this.coinService.getCoins().subscribe(coins => 
 			{
 				this.coins = coins;
-				this.coinService.getCryptoCompareCoins(this.coins).subscribe(data => 
-			   {
-				   this.coinService.mergeData(this.coins, data);
-			   });
+				this.coinService.refreshData(this.coins);
 			});
-
-		
-}
+	}
   constructor(private coinService: CoinService, private sortCoinsService: SortCoinsService) { }
   
   ngOnInit() {
