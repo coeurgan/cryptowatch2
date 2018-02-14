@@ -16,11 +16,8 @@ export class CoinAddComponent implements OnInit {
   ngOnInit() {
   }
   
-  add(coinId : string, coinQuantity : number, coinTargetMarketCap:number)
-  {
-	  console.log(coinId+"-"+coinQuantity+"-"+coinTargetMarketCap);
-	  this.coins.push({ id: coinId, quantity: coinQuantity, targetMarketCap:coinTargetMarketCap });
-	  this.coinService.refreshData(this.coins);
-   }
-
+	add(coinId : string, coinQuantity : number, coinTargetMarketCap:number)
+	{
+	  this.coinService.add(this.coins, coinId, coinQuantity, coinTargetMarketCap);
+	}
 }

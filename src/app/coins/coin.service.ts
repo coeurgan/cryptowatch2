@@ -52,4 +52,11 @@ export class CoinService {
 				this.mergeData(coins, data);
 			});
 	   }
+	   
+	add(coins: Coin[], coinId : string, coinQuantity : number, coinTargetMarketCap:number)
+	{
+	  coins.push({ id: coinId, quantity: coinQuantity, targetMarketCap:coinTargetMarketCap });
+	  this.refreshData(coins);
+	}
+
 }
