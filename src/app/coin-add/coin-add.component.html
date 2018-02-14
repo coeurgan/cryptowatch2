@@ -1,0 +1,16 @@
+  <div>
+  <label>Coin id:
+    <input placeholder="ETH" #coinId />
+  </label>
+    <label>Coin quantity:
+    <input  placeholder="12" #coinQuantity />
+  </label>
+    <label>Target maket cap:
+    <input  placeholder="5000" #coinTargetMarketCap />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(coinId.value, coinQuantity.value, coinTargetMarketCap.value);">
+    add
+  </button>
+</div>
+
