@@ -1,10 +1,10 @@
 
   
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<input type="text" ng-model="filterValue">{{filter()}}
+
 <table   class="w3-table-all w3-hoverable">
 <tr>
-<td>Ticker</td>
+<td (click)="onSort('id')">Ticker</td>
 <td>Quantity</td>
 <td>Unit price</td>
 <td>Total value</td>
@@ -25,4 +25,5 @@
 </tr>
 </table>
   <app-coin-detail [coin]="selectedCoin"></app-coin-detail>
+
 
