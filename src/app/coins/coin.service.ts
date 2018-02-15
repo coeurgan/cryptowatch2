@@ -70,9 +70,14 @@ export class CoinService {
 	   
 	add(coins: Coin[], coinId : string, coinQuantity : number, coinTargetMarketCap:number)
 	{
-	  coins.push({ id: coinId, quantity: coinQuantity, targetMarketCap:coinTargetMarketCap });
-	  this.refreshData(coins);
-	  this.messageService.add(coinId + " coin added !");
+		if (coinId == "" || coinQuantity =="" || coinTargetMarketCap =="")
+		{
+			this.messageService.addError("Please fill in the form !");
+			return;
+		}
+		coins.push({ id: coinId, quantity: coinQuantity, targetMarketCap:coinTargetMarketCap });
+		this.refreshData(coins);
+		this.messageService.addSuccess(coinId + " coin added !");
 	}
 
 }

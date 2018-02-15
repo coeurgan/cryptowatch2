@@ -1,7 +1,12 @@
 <div *ngIf="messageService.messages.length">
-  <div *ngFor='let message of messageService.messages'> 
-    <div class="w3-panel w3-green">
-    <p>{{message}}</p>
+  <div *ngFor='let message of messageService.getSuccessMessages()'> 
+    <div class="w3-panel  w3-green">
+    <p>{{message.message}}</p>
+  </div>
+  </div>
+  <div *ngFor='let message of messageService.getErrorMessages()'> 
+    <div class="w3-panel  w3-red">
+    <p>{{message.message}}</p>
   </div>
   </div>
   <!--

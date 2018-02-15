@@ -9,6 +9,6 @@ describe('cryptowatch2 App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to CRYPTOWATCH 2!');
+    expect(page.getWelcomeText()).toEqual('Welcome to CRYPTOWATCH 2!');
   });
 });

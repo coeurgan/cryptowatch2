@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>Basic testing</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Add coin</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4200/<datalist><option>http://localhost:4200/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//p/button<datalist><option>//p/button</option><option>css=button.w3-button.w3-block.w3-teal</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//input[@type='text']<datalist><option>//input[@type='text']</option><option>//input</option><option>css=input.w3-input</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>//input[@type='text']<datalist><option>//input[@type='text']</option><option>//input</option><option>css=input.w3-input</option></datalist></td><td>LTC</td>
+</tr>
+<tr><td>type</td><td>xpath=(//input[@type='text'])[2]<datalist><option>xpath=(//input[@type='text'])[2]</option><option>//p[2]/input</option></datalist></td><td>1.48</td>
+</tr>
+<tr><td>type</td><td>xpath=(//input[@type='text'])[3]<datalist><option>xpath=(//input[@type='text'])[3]</option><option>//p[3]/input</option></datalist></td><td>40000</td>
+</tr>
+<tr><td>click</td><td>//div/button<datalist><option>//div/button</option><option>css=button.w3-button.w3-teal</option></datalist></td><td></td>
+</tr>
+<tr><td>assertElementPresent</td><td>css=div.w3-panel.w3-green &gt; p<datalist><option>//div/button</option><option>css=button.w3-button.w3-teal</option><option>css=div.w3-panel.w3-green &gt; p</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>css=div.w3-panel.w3-green &gt; p<datalist><option>css=div.w3-panel.w3-green &gt; p</option></datalist></td><td>LTC coin added !</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Empty form</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:4200/<datalist><option>http://localhost:4200/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//p/button<datalist><option>//p/button</option><option>css=button.w3-button.w3-block.w3-teal</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//div/button<datalist><option>//div/button</option><option>css=button.w3-button.w3-teal</option></datalist></td><td></td>
+</tr>
+<tr><td>assertElementPresent</td><td>css=div.w3-panel.w3-red &gt; p<datalist><option>css=div.w3-panel.w3-red &gt; p</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
