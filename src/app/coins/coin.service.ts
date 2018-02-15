@@ -10,29 +10,13 @@ import { MessageService } from '../message.service';
 @Injectable()
 export class CoinService {
 
-	listCoins : ApiCoin[];
+	
 	
 	constructor(private http: HttpClient, private messageService:MessageService) {
-		//this.getList();
+		
 	}
 	getCoins(): Observable<Coin[]> {
 		return this.http.get<Coin[]>('api/coins');
-	}
-	
-	getList()
-	{
-		var url = "https://min-api.cryptocompare.com/data/all/coinlist";
-		this.http.get<CoinListResponse>(url).subscribe(data => 
-		{
-			
-			console.log("typeof_data"+typeof(data["Data"]["42"]));
-			console.log(data["Data"]["42"]);
-			
-			(Object.values(data.Data)).forEach(element => {
-				console.log("boucle");
-				console.log(element);
-			});
-		});
 	}
 
 	getCryptoCompareCoins(coins: Coin[]) {
@@ -78,6 +62,18 @@ export class CoinService {
 		this.refreshData(coins);
 		this.messageService.addSuccess(coinId + " coin added !");
 		return true;
+	}
+	
+		getList(listCoins : ApiCoin[])
+	{
+		var url = "https://min-api.cryptocompare.com/data/all/coinlist";
+		this.http.get<CoinListResponse>(url).subscribe(data => 
+		{
+			(Object.values(data.Data)).forEach(element => {
+				listCoins.push(element);
+			});
+			console.log(listCoins);
+		});
 	}
 
 }
