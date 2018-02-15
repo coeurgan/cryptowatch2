@@ -1,5 +1,11 @@
 <div *ngIf="messageService.messages.length">
-  <div *ngFor='let message of messageService.messages'> {{message}} </div>
+  <div *ngFor='let message of messageService.messages'> 
+    <div class="w3-panel w3-green">
+    <p>{{message}}</p>
+  </div>
+  </div>
+  <!--
   <button class="clear"
           (click)="messageService.clear()">clear</button>
+		  -->
 </div>
