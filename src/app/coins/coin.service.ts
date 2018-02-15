@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Coin } from './coin';
-import { ApiCoin } from './api-coin';
-import { CoinInfo } from './coin-info';
+import { ApiCoin,  CoinListResponse, CoinData} from './api-coin';
 import { COINS } from './mock-coins';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
@@ -23,13 +22,13 @@ export class CoinService {
 	getList()
 	{
 		var url = "https://min-api.cryptocompare.com/data/all/coinlist";
-		this.http.get<ApiCoin>(url).subscribe(data => 
+		this.http.get<CoinListResponse>(url).subscribe(data => 
 		{
 			
 			console.log("typeof_data"+typeof(data["Data"]["42"]));
 			console.log(data["Data"]["42"]);
 			
-			(data.Data as any[]).forEach(element => {
+			(Object.values(data.Data)).forEach(element => {
 				console.log("boucle");
 				console.log(element);
 			});

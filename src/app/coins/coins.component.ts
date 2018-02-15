@@ -25,6 +25,7 @@ export class CoinsComponent implements OnInit {
   filterValue:string;
   selectedCoin: Coin;
 
+
 	onSelect(coin: Coin): void {
 	  this.selectedCoin = coin;
 	}
