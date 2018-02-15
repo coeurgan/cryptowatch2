@@ -11,6 +11,8 @@ import { AppComponent } from './app.component';
 import { CoinsComponent } from './coins/coins.component';
 import { CoinDetailComponent } from './coin-detail/coin-detail.component';
 import { CoinAddComponent } from './coin-add/coin-add.component';
+import { MessagesComponent } from './messages/messages.component';
+import { MessageService } from './message.service';
 
 
 @NgModule({
@@ -19,7 +21,8 @@ import { CoinAddComponent } from './coin-add/coin-add.component';
     CoinsComponent,
     MillionDollarsPipe,
     CoinDetailComponent,
-    CoinAddComponent
+    CoinAddComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,7 @@ import { CoinAddComponent } from './coin-add/coin-add.component';
   ],
   providers: [
 
-  ],
+  MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
