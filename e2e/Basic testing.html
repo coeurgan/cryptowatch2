@@ -1,48 +1,154 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
-	<title>Basic testing</title>
-</head>
+<!DOCTYPE html>
+<html lang="en"><script src="Basic%20testing_files/prompt.js"></script><script src="Basic%20testing_files/runScript.js"></script><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>TESTS ANGULAR2</title>
+  <!-- base href="http://localhost:4200/" -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="http://localhost:4200/favicon.ico">
+<style type="text/css">/* You can add global styles to this file, and also import other style files */
+
+/* Application-wide Styles */
+
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+h2, h3 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+body {
+  margin: 2em;
+}
+
+body, input[text], button {
+  color: #888;
+  font-family: Cambria, Georgia;
+}
+
+/* everywhere else */
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style><style>h1[_ngcontent-c0] {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}</style><style></style></head>
 <body>
-<table cellpadding="1" cellspacing="1" border="1">
-<thead>
-<tr><td rowspan="1" colspan="3">Add coin</td></tr>
-</thead>
-<tbody>
-<tr><td>open</td><td>http://localhost:4200/<datalist><option>http://localhost:4200/</option></datalist></td><td></td>
+  <app-root _nghost-c0="" ng-version="5.2.3">
+<div _ngcontent-c0="" style="text-align:center">
+  <h1 _ngcontent-c0="">
+    Welcome to CRYPTOWATCH 2!
+  </h1>
+  <app-messages _ngcontent-c0="" _nghost-c1=""><!--bindings={
+  "ng-reflect-ng-if": "1"
+}--><div _ngcontent-c1="">
+  <!--bindings={
+  "ng-reflect-ng-for-of": ""
+}-->
+  <!--bindings={
+  "ng-reflect-ng-for-of": "[object Object]"
+}--><div _ngcontent-c1=""> 
+    <div _ngcontent-c1="" class="w3-panel  w3-red">
+    <p _ngcontent-c1="">Please fill in the form !</p>
+  </div>
+  </div>
+  
+</div>
+</app-messages>
+  <app-coins _ngcontent-c0="" _nghost-c2="">
+  
+<link _ngcontent-c2="" href="Basic%20testing_files/w3.css" rel="stylesheet">
+
+<table _ngcontent-c2="" class="w3-table-all w3-hoverable">
+<tbody _ngcontent-c2=""><tr _ngcontent-c2="">
+<td _ngcontent-c2=""><button _ngcontent-c2="" class="w3-btn">Ticker</button></td>
+<td _ngcontent-c2="">Quantity</td>
+<td _ngcontent-c2="">Unit price</td>
+<td _ngcontent-c2=""><button _ngcontent-c2="" class="w3-btn">Total value</button></td>
+<td _ngcontent-c2=""><button _ngcontent-c2="" class="w3-btn">Market CAP</button></td>
+<td _ngcontent-c2=""><button _ngcontent-c2="" class="w3-btn">Target market CAP</button></td>
+<td _ngcontent-c2="">Target unit price</td>
+<td _ngcontent-c2=""><button _ngcontent-c2="" class="w3-btn">Target total value</button></td>
 </tr>
-<tr><td>click</td><td>//p/button<datalist><option>//p/button</option><option>css=button.w3-button.w3-block.w3-teal</option></datalist></td><td></td>
-</tr>
-<tr><td>click</td><td>//input[@type='text']<datalist><option>//input[@type='text']</option><option>//input</option><option>css=input.w3-input</option></datalist></td><td></td>
-</tr>
-<tr><td>type</td><td>//input[@type='text']<datalist><option>//input[@type='text']</option><option>//input</option><option>css=input.w3-input</option></datalist></td><td>LTC</td>
-</tr>
-<tr><td>type</td><td>xpath=(//input[@type='text'])[2]<datalist><option>xpath=(//input[@type='text'])[2]</option><option>//p[2]/input</option></datalist></td><td>1.48</td>
-</tr>
-<tr><td>type</td><td>xpath=(//input[@type='text'])[3]<datalist><option>xpath=(//input[@type='text'])[3]</option><option>//p[3]/input</option></datalist></td><td>40000</td>
-</tr>
-<tr><td>click</td><td>//div/button<datalist><option>//div/button</option><option>css=button.w3-button.w3-teal</option></datalist></td><td></td>
-</tr>
-<tr><td>assertElementPresent</td><td>css=div.w3-panel.w3-green &gt; p<datalist><option>//div/button</option><option>css=button.w3-button.w3-teal</option><option>css=div.w3-panel.w3-green &gt; p</option></datalist></td><td></td>
-</tr>
-<tr><td>assertText</td><td>css=div.w3-panel.w3-green &gt; p<datalist><option>css=div.w3-panel.w3-green &gt; p</option></datalist></td><td>LTC coin added !</td>
+<!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--><tr _ngcontent-c2="">
+<td _ngcontent-c2="">ETH</td>
+<td _ngcontent-c2="">1</td>
+<td _ngcontent-c2="">$932.17</td>
+<td _ngcontent-c2="">$932.17</td>
+<td _ngcontent-c2="">M$91,011</td>
+<td _ngcontent-c2="">M$200,000.00</td>
+<td _ngcontent-c2="">$2,048.48</td>
+<td _ngcontent-c2="">$2,048.48</td>
+</tr><tr _ngcontent-c2="">
+<td _ngcontent-c2="">XRB</td>
+<td _ngcontent-c2="">10</td>
+<td _ngcontent-c2="">$8.53</td>
+<td _ngcontent-c2="">$85.33</td>
+<td _ngcontent-c2="">M$1,137</td>
+<td _ngcontent-c2="">M$10,000.00</td>
+<td _ngcontent-c2="">$75.05</td>
+<td _ngcontent-c2="">$750.48</td>
+</tr><tr _ngcontent-c2="">
+<td _ngcontent-c2="">XBY</td>
+<td _ngcontent-c2="">100</td>
+<td _ngcontent-c2="">$0.23</td>
+<td _ngcontent-c2="">$22.92</td>
+<td _ngcontent-c2="">M$149</td>
+<td _ngcontent-c2="">M$5,000.00</td>
+<td _ngcontent-c2="">$7.69</td>
+<td _ngcontent-c2="">$769.23</td>
 </tr>
 </tbody></table>
-<table cellpadding="1" cellspacing="1" border="1">
-<thead>
-<tr><td rowspan="1" colspan="3">Empty form</td></tr>
-</thead>
-<tbody>
-<tr><td>open</td><td>http://localhost:4200/<datalist><option>http://localhost:4200/</option></datalist></td><td></td>
-</tr>
-<tr><td>click</td><td>//p/button<datalist><option>//p/button</option><option>css=button.w3-button.w3-block.w3-teal</option></datalist></td><td></td>
-</tr>
-<tr><td>click</td><td>//div/button<datalist><option>//div/button</option><option>css=button.w3-button.w3-teal</option></datalist></td><td></td>
-</tr>
-<tr><td>assertElementPresent</td><td>css=div.w3-panel.w3-red &gt; p<datalist><option>css=div.w3-panel.w3-red &gt; p</option></datalist></td><td></td>
-</tr>
-</tbody></table>
-</body>
-</html>
+<app-coin-detail _ngcontent-c2="" _nghost-c3=""><!--bindings={}--></app-coin-detail>
+<app-coin-add _ngcontent-c2="" _nghost-c4="" ng-reflect-coins="[object Object],[object Object"><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><div _ngcontent-c4="">
+<div _ngcontent-c4="" class="w3-container w3-teal">
+  <h2 _ngcontent-c4="">Add new coin</h2>
+</div>
+
+<form _ngcontent-c4="" class="w3-container ng-untouched ng-pristine ng-valid" novalidate="">
+  <p _ngcontent-c4="">
+  <input _ngcontent-c4="" class="w3-input" type="text">
+  <label _ngcontent-c4="">Coin id</label></p>
+
+  <p _ngcontent-c4="">
+  <input _ngcontent-c4="" class="w3-input" type="text">
+  <label _ngcontent-c4="">Coin quantity</label></p>
+
+  <p _ngcontent-c4="">
+  <input _ngcontent-c4="" class="w3-input" type="text">
+  <label _ngcontent-c4="">Target maket cap</label></p>
+</form>
+  <button _ngcontent-c4="" class="w3-button w3-teal">
+    ADD
+  </button>
+    <button _ngcontent-c4="" class="w3-button w3-teal">
+    CANCEL
+  </button>
+</div>
+<!--bindings={
+  "ng-reflect-ng-if": "false"
+}-->
+
+</app-coin-add>
+
+</app-coins>
+  
+
+ </div>
+
+</app-root>
+<script type="text/javascript" src="Basic%20testing_files/inline.js"></script><script type="text/javascript" src="Basic%20testing_files/polyfills.js"></script><script type="text/javascript" src="Basic%20testing_files/styles.js"></script><script type="text/javascript" src="Basic%20testing_files/vendor.js"></script><script type="text/javascript" src="Basic%20testing_files/main.js"></script>
+
+</body></html>

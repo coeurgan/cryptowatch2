@@ -20,8 +20,10 @@ export class CoinAddComponent implements OnInit {
   
 	add(coinId : string, coinQuantity : number, coinTargetMarketCap:number)
 	{
-	    this.coinService.add(this.coins, coinId, coinQuantity, coinTargetMarketCap);
+		if (this.coinService.add(this.coins, coinId, coinQuantity, coinTargetMarketCap))
+		{
 		this.setVisible(false);
+		}
 	}
 	
 	setVisible(visible : boolean)

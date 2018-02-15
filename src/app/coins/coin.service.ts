@@ -68,16 +68,17 @@ export class CoinService {
 		});
 	}
 	   
-	add(coins: Coin[], coinId : string, coinQuantity : number, coinTargetMarketCap:number)
+	add(coins: Coin[], coinId : string, coinQuantity : number, coinTargetMarketCap:number):boolean
 	{
 		if (coinId == "" || !coinQuantity || !coinTargetMarketCap)
 		{
 			this.messageService.addError("Please fill in the form !");
-			return;
+			return false;
 		}
 		coins.push({ id: coinId, quantity: coinQuantity, targetMarketCap:coinTargetMarketCap });
 		this.refreshData(coins);
 		this.messageService.addSuccess(coinId + " coin added !");
+		return true;
 	}
 
 }
