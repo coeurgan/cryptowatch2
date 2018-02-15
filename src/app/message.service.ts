@@ -7,11 +7,11 @@ export class MessageService {
 	messages: Message[] = [];
 
 	addSuccess(message: string) {
-		this.messages.push(new Message(){message :message, type:MessageType.Success});
+		this.messages.push({message :message, type:MessageType.Success,});
 	}
 	
 	addError(message: string) {
-		this.messages.push(new Message(){message :message, type:MessageType.Error});
+		this.messages.push({message :message, type:MessageType.Error,});
 	}
 
 	getSuccessMessages():Message[]

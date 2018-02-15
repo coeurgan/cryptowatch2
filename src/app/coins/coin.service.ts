@@ -70,7 +70,7 @@ export class CoinService {
 	   
 	add(coins: Coin[], coinId : string, coinQuantity : number, coinTargetMarketCap:number)
 	{
-		if (coinId == "" || coinQuantity =="" || coinTargetMarketCap =="")
+		if (coinId == "" || !coinQuantity || !coinTargetMarketCap)
 		{
 			this.messageService.addError("Please fill in the form !");
 			return;
